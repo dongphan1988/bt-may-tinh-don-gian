@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="myNumber" />
+<table>
+    <tr>
+        <th> <button type="button" value="1" onclick="getvalue(this.value)">1</button> </th>
+        <th> <button type="button" value="2" onclick="getvalue(this.value)">2</button> </th>
+        <th> <button type="button" value="3" onclick="getvalue(this.value)">3</button> </th>
+        <th> <button type="button" value="+" onclick="getvalue(this.value)">+</button> </th>
+    </tr>
+    <tr>
+        <th> <button type="button" value="5" onclick="getvalue(this.value)">4</button> </th>
+        <th> <button type="button" value="6" onclick="getvalue(this.value)">5</button> </th>
+        <th> <button type="button" value="7" onclick="getvalue(this.value)">6</button> </th>
+        <th> <button type="button" value="-" onclick="getvalue(this.value)">-</button> </th>
+    </tr>
+    <tr>
+        <th> <button type="button" value="7" onclick="getvalue(this.value)">7</button> </th>
+        <th> <button type="button" value="8" onclick="getvalue(this.value)">8</button> </th>
+        <th> <button type="button" value="9" onclick="getvalue(this.value)">9</button> </th>
+        <th> <button type="button" value="*" onclick="getvalue(this.value)">x</button> </th>
+    </tr>
+    <tr>
+        <th> <button type="button" value="C" onclick="clearInput(this.value)">C</button> </th>
+        <th> <button type="button" value="0" onclick="getvalue(this.value)">0</button> </th>
+        <th> <button type="button" value="=" onclick="getResult()">=</button> </th>
+        <th> <button type="button" value="/" onclick="getvalue(this.value)">/</button> </th>
+    </tr>
+</table>
+<script>
+    function getvalue(number) {
+        document.getElementById("myNumber").value += number;
+    }
+    function getResult() {
+        var input = document.getElementById('myNumber').value;
+        var output = eval(input);
+        document.getElementById('myNumber').value = output;
+    }
+    function clearInput() {
+        document.getElementById('myNumber').value = '';
+    }
+</script>
+</body>
+</html>
